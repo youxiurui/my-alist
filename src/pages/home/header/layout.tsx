@@ -12,6 +12,8 @@ import { Switch, Match, For } from "solid-js"
 import { Dynamic } from "solid-js/web"
 import { useT } from "~/hooks"
 import { getMainColor, LayoutType, layout, setLayout } from "~/store"
+// 将视图布局按钮悬浮在视口10px
+import "./menu.css"
 
 const layouts = {
   list: FaSolidListUl,
@@ -22,7 +24,7 @@ const layouts = {
 export const Layout = () => {
   const t = useT()
   return (
-    <>
+    <div class="menu">
       <Menu>
         <MenuTrigger
           as={IconButton}
@@ -63,6 +65,6 @@ export const Layout = () => {
           </For>
         </MenuContent>
       </Menu>
-    </>
+    </div>
   )
 }
