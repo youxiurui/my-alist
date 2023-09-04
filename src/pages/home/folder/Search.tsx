@@ -188,7 +188,7 @@ const Search = () => {
   }
   bus.on("tool", handler)
   const searchEvent = (e: KeyboardEvent) => {
-    if ((e.ctrlKey || (isMac && e.metaKey)) && e.key.toLowerCase() === "f") {
+    if ((e.ctrlKey || (isMac && e.metaKey)) && e.key.toLowerCase() === "k") {
       e.preventDefault()
       onToggle()
     }
