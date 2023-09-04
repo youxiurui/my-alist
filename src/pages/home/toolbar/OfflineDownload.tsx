@@ -20,31 +20,33 @@ export const OfflineDownload = () => {
     bus.off("tool", handler)
   })
   return (
-    <ModalInput
-      title="home.toolbar.offline_download"
-      type="text"
-      opened={isOpen()}
-      onClose={onClose}
-      loading={loading()}
-      tips={t("home.toolbar.offline_download-tips")}
-      topSlot={
-        <Box mb="$2">
-          <SelectWrapper
-            value={type()}
-            onChange={(v) => setType(v)}
-            options={[
-              { value: "aria2", label: "Aria2" },
-              { value: "qbit", label: "qBittorrent" },
-            ]}
-          />
-        </Box>
-      }
-      onSubmit={async (urls) => {
-        const resp = await ok(pathname(), urls.split("\n"), type())
-        handleRespWithNotifySuccess(resp, () => {
-          onClose()
-        })
-      }}
-    />
+    <>
+      <ModalInput
+        title="home.toolbar.offline_download"
+        type="text"
+        opened={isOpen()}
+        onClose={onClose}
+        loading={loading()}
+        tips={t("home.toolbar.offline_download-tips")}
+        topSlot={
+          <Box mb="$2">
+            <SelectWrapper
+              value={type()}
+              onChange={(v) => setType(v)}
+              options={[
+                { value: "aria2", label: "Aria2" },
+                { value: "qbit", label: "qBittorrent" },
+              ]}
+            />
+          </Box>
+        }
+        onSubmit={async (urls) => {
+          const resp = await ok(pathname(), urls.split("\n"), type())
+          handleRespWithNotifySuccess(resp, () => {
+            onClose()
+          })
+        }}
+      />
+    </>
   )
 }

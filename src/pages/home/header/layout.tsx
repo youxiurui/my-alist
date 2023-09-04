@@ -13,7 +13,7 @@ import { Dynamic } from "solid-js/web"
 import { useT } from "~/hooks"
 import { getMainColor, LayoutType, layout, setLayout } from "~/store"
 // 将视图布局按钮悬浮在视口10px
-import "./menu.css"
+import "../Rui/rui.css"
 
 const layouts = {
   list: FaSolidListUl,

@@ -1,0 +1,31 @@
+.refresh {
+  position: fixed;
+  right: -6px;
+  top: -260px;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--hope-radii-lg);
+  background-color: rgb(214, 232, 251);
+  text-align: center;
+  color: rgb(24, 144, 255);
+  line-height: 30px;
+  cursor: pointer;
+}
+.serch {
+  position: fixed;
+  right: 10px;
+  top: 110px;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--hope-radii-lg);
+  background-color: rgb(214, 232, 251);
+  text-align: center;
+  color: rgb(24, 144, 255);
+  line-height: 30px;
+  cursor: pointer;
+}
+.menu {
+  position: fixed;
+  right: 10px;
+  top: 150px;
+}

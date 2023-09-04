@@ -17,6 +17,8 @@ import { RiSystemRefreshLine } from "solid-icons/ri"
 import { usePath } from "~/hooks"
 import { Motion } from "@motionone/solid"
 
+import "../Rui/rui.css"
+
 export const Right = () => {
   const { isOpen, onToggle } = createDisclosure({
     defaultIsOpen: localStorage.getItem("more-open") === "true",
@@ -34,7 +36,8 @@ export const Right = () => {
       bottom={margin()}
     >
       <Show
-        when={isOpen()}
+        // when={isOpen()}
+        when={true}
         fallback={
           <RightIcon
             class="toolbar-toggle"
@@ -63,13 +66,15 @@ export const Right = () => {
           <VStack spacing="$1" class="left-toolbar-in">
             <Show when={isFolder() && (userCan("write") || objStore.write)}>
               {/* <Add /> */}
-              <RightIcon
-                as={RiSystemRefreshLine}
-                tips="refresh"
-                onClick={() => {
-                  refresh(undefined, true)
-                }}
-              />
+              <div class="refresh">
+                <RightIcon
+                  as={RiSystemRefreshLine}
+                  tips="refresh"
+                  onClick={() => {
+                    refresh(undefined, true)
+                  }}
+                />
+              </div>
               <RightIcon
                 as={operations.new_file.icon}
                 tips="new_file"
@@ -137,7 +142,7 @@ export const Right = () => {
               }}
             />
           </VStack>
-          <RightIcon tips="more" as={CgMoreO} onClick={onToggle} />
+          {/* <RightIcon tips="more" as={CgMoreO} onClick={onToggle} /> */}
         </VStack>
       </Show>
     </Box>

@@ -15,7 +15,7 @@ import { bus } from "~/utils"
 import { Layout } from "./layout"
 import { isMac } from "~/utils/compatibility"
 
-import "./serch.css"
+import "../Rui/rui.css"
 
 export const Header = () => {
   const logos = getSetting("logo").split("\n")

@@ -6,8 +6,6 @@ import { Body } from "./Body"
 import { Footer } from "./Footer"
 import { Header } from "./header/Header"
 import { Toolbar } from "./toolbar/Toolbar"
-// import Exter from "./Rui/Exter"
-import "./Rui/exter.css"
 
 const Index = () => {
   useTitle(getSetting("site_title"))
