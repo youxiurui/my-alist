@@ -2,14 +2,12 @@ import { Markdown } from "~/components"
 import { useTitle } from "~/hooks"
 import { getSetting } from "~/store"
 import { notify } from "~/utils"
-import { Body } from "./Body"
-import { Footer } from "./Footer"
-import { Header } from "./header/Header"
-import { Toolbar } from "./toolbar/Toolbar"
-// import Exter from "./Rui/Exter"
-import "./Rui/exter.css"
-
-const Index = () => {
+import { Body } from "../Body"
+import { Footer } from "../Footer"
+import { Header } from "../header/Header"
+import { Toolbar } from "../toolbar/Toolbar"
+import "./exter.css"
+const Exter = () => {
   useTitle(getSetting("site_title"))
   const announcement = getSetting("announcement")
   if (announcement) {
@@ -25,4 +23,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Exter

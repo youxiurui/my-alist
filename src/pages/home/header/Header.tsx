@@ -60,7 +60,7 @@ export const Header = () => {
                   <Icon as={BsSearch} />
                   <HStack>
                     {isMac ? <Kbd>Cmd</Kbd> : <Kbd>Ctrl</Kbd>}
-                    <Kbd>K</Kbd>
+                    <Kbd>F</Kbd>
                   </HStack>
                 </HStack>
               </Show>
