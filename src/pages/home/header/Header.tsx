@@ -15,6 +15,8 @@ import { bus } from "~/utils"
 import { Layout } from "./layout"
 import { isMac } from "~/utils/compatibility"
 
+import "./serch.css"
+
 export const Header = () => {
   const logos = getSetting("logo").split("\n")
   const logo = useColorModeValue(logos[0], logos.pop())
@@ -42,7 +44,7 @@ export const Header = () => {
           <HStack class="header-right" spacing="$2">
             <Show when={objStore.state === State.Folder}>
               <Show when={getSetting("search_index") !== "none"}>
-                <HStack
+                {/* <HStack
                   bg="$neutral4"
                   w="$32"
                   p="$2"
@@ -57,12 +59,19 @@ export const Header = () => {
                     bus.emit("tool", "search")
                   }}
                 >
-                  <Icon as={BsSearch} />
                   <HStack>
                     {isMac ? <Kbd>Cmd</Kbd> : <Kbd>Ctrl</Kbd>}
                     <Kbd>F</Kbd>
                   </HStack>
-                </HStack>
+                </HStack> */}
+                <div class="serch">
+                  <Icon
+                    onClick={() => {
+                      bus.emit("tool", "search")
+                    }}
+                    as={BsSearch}
+                  />
+                </div>
               </Show>
               <Layout />
             </Show>
