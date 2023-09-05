@@ -7,7 +7,7 @@ import {
   Kbd,
 } from "@hope-ui/solid"
 import { Show } from "solid-js"
-import { getSetting, objStore, State } from "~/store"
+import { getSetting, objStore, State, getMainColor } from "~/store"
 import { BsSearch } from "solid-icons/bs"
 import { CenterLoading } from "~/components"
 import { Container } from "../Container"
@@ -64,14 +64,23 @@ export const Header = () => {
                     <Kbd>F</Kbd>
                   </HStack>
                 </HStack> */}
-                <div class="serch">
+                <HStack
+                  class="serch"
+                  _hover={{
+                    bgColor: getMainColor(),
+                    color: "white",
+                  }}
+                  _focus={{
+                    outline: "none",
+                  }}
+                >
                   <Icon
                     onClick={() => {
                       bus.emit("tool", "search")
                     }}
                     as={BsSearch}
                   />
-                </div>
+                </HStack>
               </Show>
               <Layout />
             </Show>

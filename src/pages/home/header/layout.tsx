@@ -27,12 +27,20 @@ export const Layout = () => {
     <div class="menu">
       <Menu>
         <MenuTrigger
+          class="right-menu"
+          _hover={{
+            bgColor: getMainColor(),
+            color: "white",
+          }}
+          _focus={{
+            outline: "none",
+          }}
           as={IconButton}
           color={getMainColor()}
           bgColor={changeColor(getMainColor(), { alpha: 0.15 })}
-          _hover={{
-            bgColor: changeColor(getMainColor(), { alpha: 0.2 }),
-          }}
+          // _hover={{
+          //   bgColor: changeColor(getMainColor(), { alpha: 0.2 }),
+          // }}
           aria-label="switch layout"
           compact
           size="lg"

@@ -1,31 +1,30 @@
-.refresh {
-  position: fixed;
-  right: -6px;
-  top: -260px;
-  width: 32px;
-  height: 32px;
-  border-radius: var(--hope-radii-lg);
-  background-color: rgb(214, 232, 251);
-  text-align: center;
-  color: rgb(24, 144, 255);
-  line-height: 30px;
-  cursor: pointer;
-}
 .serch {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   right: 10px;
-  top: 110px;
+  top: 120px;
   width: 32px;
   height: 32px;
   border-radius: var(--hope-radii-lg);
-  background-color: rgb(214, 232, 251);
-  text-align: center;
   color: rgb(24, 144, 255);
-  line-height: 30px;
   cursor: pointer;
+  font-size: 20px;
 }
 .menu {
   position: fixed;
-  right: 10px;
+  right: 5px;
   top: 150px;
+}
+.right-icon {
+  position: fixed;
+  right: 5px;
+  top: 190px;
+}
+.right-menu {
+  top: 5px;
+  right: 4px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0);
 }
