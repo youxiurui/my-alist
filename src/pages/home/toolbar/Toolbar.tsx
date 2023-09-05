@@ -33,7 +33,7 @@ export const Modal = () => {
       <ModalWrapper name="upload" title="home.toolbar.upload">
         <Upload />
       </ModalWrapper>
-      <LocalSettings />
+      {/* <LocalSettings /> */}
     </>
   )
 }

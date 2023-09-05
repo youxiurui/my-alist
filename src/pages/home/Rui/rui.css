@@ -1,3 +1,8 @@
+.exter {
+  width: 80vw;
+  position: relative;
+  top: 50px;
+}
 .serch {
   position: fixed;
   display: flex;
@@ -27,4 +32,55 @@
   right: 4px;
   font-size: 20px;
   background-color: rgba(255, 255, 255, 0);
+}
+
+.mode-switch {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  color: rgb(24, 144, 255);
+}
+.mode-icon {
+  position: relative;
+  width: 29px;
+  height: 29px;
+}
+.mode-switch:hover {
+  background-color: rgb(24, 144, 255);
+  border-radius: var(--hope-radii-lg);
+}
+.mode-switch:hover .mode-icon {
+  color: white;
+}
+.pool {
+  position: absolute;
+  width: 80vw;
+}
+.markdown-body > :first-child {
+  text-align: center;
+}
+.box-icon {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  right: 10px;
+  top: 85px;
+  color: rgb(24, 144, 255);
+}
+.box-icon:hover {
+  background-color: rgb(24, 144, 255);
+  border-radius: var(--hope-radii-lg);
+}
+.box-icon:hover .i-icon {
+  color: white;
+}
+.i-icon {
+  position: absolute;
+  font-size: 22px;
 }

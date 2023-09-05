@@ -8,7 +8,7 @@ import { createMemo, Show } from "solid-js"
 import { RightIcon } from "./Icon"
 import { CgMoreO } from "solid-icons/cg"
 import { TbCheckbox } from "solid-icons/tb"
-import { objStore, State, toggleCheckbox, userCan } from "~/store"
+import { objStore, State, toggleCheckbox, userCan, getMainColor } from "~/store"
 import { bus } from "~/utils"
 import { operations } from "./operations"
 import { IoMagnetOutline } from "solid-icons/io"
@@ -17,6 +17,7 @@ import { RiSystemRefreshLine } from "solid-icons/ri"
 import { usePath } from "~/hooks"
 import { Motion } from "@motionone/solid"
 
+import { SwitchColorMode } from "~/components"
 import "../Rui/rui.css"
 
 export const Right = () => {
@@ -128,13 +129,16 @@ export const Right = () => {
               as={TbCheckbox}
               onClick={toggleCheckbox}
             />
-            <RightIcon
+            {/* <RightIcon
               as={AiOutlineSetting}
               // tips="local_settings"
               onClick={() => {
                 bus.emit("tool", "local_settings")
               }}
-            />
+            /> */}
+            <div class="mode-switch">
+              <SwitchColorMode />
+            </div>
           </VStack>
         </VStack>
       </Show>

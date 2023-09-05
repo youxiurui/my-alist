@@ -4,9 +4,27 @@ import { Obj } from "./Obj"
 import { Readme } from "./Readme"
 import { Container } from "./Container"
 
+import "./Rui/rui.css"
+
 export const Body = () => {
+  let ishow = false
+  function close(falg) {
+    if (falg) {
+      document.getElementsByClassName("pool")[0].setAttribute("hidden", falg)
+    } else {
+      document.getElementsByClassName("pool")[0].removeAttribute("hidden")
+    }
+    ishow = falg
+  }
+
   return (
     <Container>
+      <div class="box-icon">
+        <i
+          onClick={() => close(!ishow)}
+          class="iconfont i-icon icon-yonghuxieyi"
+        ></i>
+      </div>
       <VStack
         class="body"
         mt="$1"
@@ -18,7 +36,9 @@ export const Body = () => {
       >
         <Nav />
         <Obj />
-        <Readme />
+        <div class="pool">
+          <Readme />
+        </div>
       </VStack>
     </Container>
   )
