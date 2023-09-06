@@ -11,8 +11,10 @@ export const Body = () => {
   function close(falg) {
     if (falg) {
       document.getElementsByClassName("pool")[0].setAttribute("hidden", falg)
+      document.getElementsByClassName("mark")[0].setAttribute("hidden", falg)
     } else {
       document.getElementsByClassName("pool")[0].removeAttribute("hidden")
+      document.getElementsByClassName("mark")[0].removeAttribute("hidden")
     }
     ishow = falg
   }
@@ -36,7 +38,12 @@ export const Body = () => {
       >
         <Nav />
         <Obj />
+        <div class="mark"></div>
         <div class="pool">
+          <i
+            onClick={() => close(!ishow)}
+            class="iconfont icon-close icon-guanbi"
+          ></i>
           <Readme />
         </div>
       </VStack>

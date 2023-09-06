@@ -57,6 +57,7 @@
 }
 .pool {
   position: absolute;
+  z-index: 999;
   width: 80vw;
 }
 .markdown-body > :first-child {
@@ -83,4 +84,20 @@
 .i-icon {
   position: absolute;
   font-size: 22px;
+}
+.icon-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 30px;
+  z-index: 999;
+  cursor: pointer;
+}
+.mark {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 998;
+  background-color: rgba(0, 0, 0, 0.5);
 }
