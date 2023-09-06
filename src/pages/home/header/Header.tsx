@@ -64,7 +64,7 @@ export const Header = () => {
                     <Kbd>F</Kbd>
                   </HStack>
                 </HStack> */}
-                <HStack
+                {/* <HStack
                   class="serch"
                   _hover={{
                     bgColor: getMainColor(),
@@ -80,9 +80,9 @@ export const Header = () => {
                     }}
                     as={BsSearch}
                   />
-                </HStack>
+                </HStack> */}
               </Show>
-              <Layout />
+              {/* <Layout /> */}
             </Show>
           </HStack>
         </HStack>
